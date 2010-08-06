@@ -20,7 +20,7 @@
 
 #import "RootViewController.h"
 #import "LTKit/LTKit.h"
-#import "TableViewCell.h"
+#import "FastTableViewCell.h"
 
 @implementation RootViewController
 
@@ -32,6 +32,8 @@
 	[super viewDidLoad];
 
 	self.title = @"Fast Table View Cells";
+    self.navigationItem.backBarButtonItem = [UIBarButtonItem barButtonItemWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil
+    	action:nil];
 	self.tableView.rowHeight = 61.0;
 }
 
@@ -45,38 +47,35 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString * tableViewCellIdentifier = @"TableViewCell";
+    static NSString * tableViewCellIdentifier = @"FastTableViewCell";
 
-    TableViewCell * cell = (TableViewCell *)[tableView dequeueReusableCellWithIdentifier:tableViewCellIdentifier];
+    FastTableViewCell * cell = (FastTableViewCell *)[tableView dequeueReusableCellWithIdentifier:tableViewCellIdentifier];
 
     if (cell == nil)
     {
-        cell = (TableViewCell *)[[[NSBundle mainBundle] loadNibNamed:tableViewCellIdentifier owner:self options:nil] objectAtIndex:0];
+        cell = (FastTableViewCell *)[[[NSBundle mainBundle] loadNibNamed:tableViewCellIdentifier owner:self options:nil] objectAtIndex:0];
     }
 
 	if ((indexPath.row % 3) == 0)
 	{
-		cell.imageView.image = [UIImage imageNamed:@"ninten_sprite.png"];
+		cell.imageView.image = [UIImage imageNamed:@"ninten_sprite"];
 		cell.firstLabel.text = @"Ninten (MOTHER 1)";
 		cell.secondLabel.text = @"Unique PSI: 4th-D Slip";
 		cell.thirdLabel.text = @"Hometown: Mother's Day";
-		cell.backgroundColor = [UIColor colorWithAbsoluteRed:255.0 green:160.0 blue:151.0];
 	}
 	else if ((indexPath.row % 3) == 1)
 	{
-		cell.imageView.image = [UIImage imageNamed:@"ness_sprite.png"];
+		cell.imageView.image = [UIImage imageNamed:@"ness_sprite"];
 		cell.firstLabel.text = @"Ness (MOTHER 2)";
 		cell.secondLabel.text = @"Unique PSI: PK Rockin'";
 		cell.thirdLabel.text = @"Hometown: Onett";
-		cell.backgroundColor = [UIColor colorWithAbsoluteRed:255.0 green:255.0 blue:182.0];
 	}
 	else
 	{
-		cell.imageView.image = [UIImage imageNamed:@"lucas_sprite.png"];
+		cell.imageView.image = [UIImage imageNamed:@"lucas_sprite"];
 		cell.firstLabel.text = @"Lucas (MOTHER 3)";
 		cell.secondLabel.text = @"Unique PSI: PK Love";
 		cell.thirdLabel.text = @"Hometown: Tazmily Village";
-		cell.backgroundColor = [UIColor colorWithAbsoluteRed:150.0 green:203.0 blue:254.0];
 	}
 
 	[cell drawCompositeView];
@@ -87,6 +86,16 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 	return 10000;
+}
+
+#pragma mark -
+#pragma mark UITableViewDelegate Methods
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIViewController * viewController = [[[RootViewController alloc] initWithStyle:UITableViewStylePlain] autorelease];
+    
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 @end

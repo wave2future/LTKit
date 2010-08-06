@@ -29,7 +29,7 @@
 #pragma mark -
 #pragma mark LTTableViewCellContentView Methods
 
-+ (id)viewWithTableViewCell:(LTTableViewCell *)tableViewCell
++ (id)compositeViewWithTableViewCell:(LTTableViewCell *)tableViewCell
 {
 	return [[[self alloc] initWithTableViewCell:tableViewCell] autorelease];
 }
@@ -68,6 +68,15 @@
 
 - (void)drawRect:(CGRect)rect
 {
+    if (!self.tableViewCell.selected && !self.tableViewCell.highlighted)
+    {
+        if (self.tableViewCell.backgroundView != nil && [self.tableViewCell.backgroundView isKindOfClass:[UIImageView class]])
+        {
+            UIImageView * imageView = (UIImageView *)self.tableViewCell.backgroundView;
+            [imageView.image drawInRect:imageView.frame blendMode:kCGBlendModeNormal alpha:imageView.alpha];
+        }
+    }
+
 	NSArray * propertyNames = [[self.tableViewCell class] propertyNames];
 
 	for (NSString * propertyName in propertyNames)
@@ -77,13 +86,29 @@
 		if ([property isKindOfClass:[UILabel class]])
 		{
 			UILabel * label = (UILabel *)property;
-			[label.textColor set];
+            
+            if (label.shadowColor != nil)
+            {
+                [label.shadowColor set];
+                [label.text drawInRect:CGRectOffset(label.frame, label.shadowOffset.width, label.shadowOffset.height) withFont:label.font
+                	lineBreakMode:label.lineBreakMode alignment:label.textAlignment];
+            }
+            
+            if (self.tableViewCell.selected || self.tableViewCell.highlighted)
+            {
+                [label.highlightedTextColor set];
+            }
+            else
+            {
+                [label.textColor set];
+            }
+
 			[label.text drawInRect:label.frame withFont:label.font lineBreakMode:label.lineBreakMode alignment:label.textAlignment];
 		}
 		else if ([property isKindOfClass:[UIImageView class]])
 		{
 			UIImageView * imageView = (UIImageView *)property;
-			[imageView.image drawInRect:imageView.frame];
+			[imageView.image drawInRect:imageView.frame blendMode:kCGBlendModeNormal alpha:imageView.alpha];
 		}
 	}
 }

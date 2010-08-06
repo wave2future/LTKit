@@ -20,7 +20,7 @@
 
 #import "LTKit/LTTableViewCell.h"
 
-@interface TableViewCell : LTTableViewCell
+@interface FastTableViewCell : LTTableViewCell
 {
 	@private
 

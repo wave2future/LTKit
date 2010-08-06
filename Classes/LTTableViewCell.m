@@ -28,7 +28,7 @@
 
 - (void)drawCompositeView
 {
-	LTTableViewCellCompositeView * compositeView = [LTTableViewCellCompositeView viewWithTableViewCell:self];
+	LTTableViewCellCompositeView * compositeView = [LTTableViewCellCompositeView compositeViewWithTableViewCell:self];
 	compositeView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 	compositeView.contentMode = UIViewContentModeRedraw;
 

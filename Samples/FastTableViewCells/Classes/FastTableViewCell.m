@@ -18,9 +18,9 @@
 //  limitations under the License.
 //
 
-#import "TableViewCell.h"
+#import "FastTableViewCell.h"
 
-@implementation TableViewCell
+@implementation FastTableViewCell
 
 @synthesize imageView = imageView_;
 @synthesize firstLabel = firstLabel_;

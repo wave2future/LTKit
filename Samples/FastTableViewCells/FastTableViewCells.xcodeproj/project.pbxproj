@@ -12,13 +12,22 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		214631DF1198DCBE00BD510D /* libLTKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 214631DE1198DCBC00BD510D /* libLTKit.a */; };
-		214632421198ED4300BD510D /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 214632411198ED4300BD510D /* TableViewCell.xib */; };
-		214632461198ED6000BD510D /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 214632451198ED6000BD510D /* TableViewCell.m */; };
+		214632421198ED4300BD510D /* FastTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 214632411198ED4300BD510D /* FastTableViewCell.xib */; };
+		214632461198ED6000BD510D /* FastTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 214632451198ED6000BD510D /* FastTableViewCell.m */; };
 		21F43CD3119A0D5000B03342 /* lucas_sprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 21F43CD0119A0D5000B03342 /* lucas_sprite.png */; };
 		21F43CD4119A0D5000B03342 /* ness_sprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 21F43CD1119A0D5000B03342 /* ness_sprite.png */; };
 		21F43CD5119A0D5000B03342 /* ninten_sprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 21F43CD2119A0D5000B03342 /* ninten_sprite.png */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		EB76C075120C874800951710 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = EB76C06E120C874800951710 /* Default.png */; };
+		EB76C076120C874800951710 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB76C06F120C874800951710 /* Default@2x.png */; };
+		EB76C077120C874800951710 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EB76C070120C874800951710 /* Icon.png */; };
+		EB76C078120C874800951710 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB76C071120C874800951710 /* Icon@2x.png */; };
+		EB76C079120C874800951710 /* lucas_sprite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB76C072120C874800951710 /* lucas_sprite@2x.png */; };
+		EB76C07A120C874800951710 /* ness_sprite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB76C073120C874800951710 /* ness_sprite@2x.png */; };
+		EB76C07B120C874800951710 /* ninten_sprite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB76C074120C874800951710 /* ninten_sprite@2x.png */; };
+		EB76C0E4120CAB4000951710 /* background_table-view-cell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB76C0E3120CAB4000951710 /* background_table-view-cell@2x.png */; };
+		EB76C0E6120CAB6100951710 /* background_table-view-cell.png in Resources */ = {isa = PBXBuildFile; fileRef = EB76C0E5120CAB6100951710 /* background_table-view-cell.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,9 +54,9 @@
 		1D6058910D05DD3D006BFB54 /* FastTableViewCells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastTableViewCells.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		214631D91198DCBC00BD510D /* LTKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LTKit.xcodeproj; path = ../../LTKit.xcodeproj; sourceTree = SOURCE_ROOT; };
-		214632411198ED4300BD510D /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
-		214632441198ED6000BD510D /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
-		214632451198ED6000BD510D /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		214632411198ED4300BD510D /* FastTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FastTableViewCell.xib; sourceTree = "<group>"; };
+		214632441198ED6000BD510D /* FastTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastTableViewCell.h; sourceTree = "<group>"; };
+		214632451198ED6000BD510D /* FastTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastTableViewCell.m; sourceTree = "<group>"; };
 		21F43CD0119A0D5000B03342 /* lucas_sprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lucas_sprite.png; sourceTree = "<group>"; };
 		21F43CD1119A0D5000B03342 /* ness_sprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ness_sprite.png; sourceTree = "<group>"; };
 		21F43CD2119A0D5000B03342 /* ninten_sprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ninten_sprite.png; sourceTree = "<group>"; };
@@ -57,6 +66,28 @@
 		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* FastTableViewCells-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FastTableViewCells-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		EB76C06E120C874800951710 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		EB76C06F120C874800951710 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		EB76C070120C874800951710 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		EB76C071120C874800951710 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		EB76C072120C874800951710 /* lucas_sprite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lucas_sprite@2x.png"; sourceTree = "<group>"; };
+		EB76C073120C874800951710 /* ness_sprite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ness_sprite@2x.png"; sourceTree = "<group>"; };
+		EB76C074120C874800951710 /* ninten_sprite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ninten_sprite@2x.png"; sourceTree = "<group>"; };
+		EB76C087120C87BF00951710 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EB76C089120C87BF00951710 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EB76C08B120C87BF00951710 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EB76C08D120C87BF00951710 /* FastTableViewCells-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FastTableViewCells-Info.plist"; sourceTree = "<group>"; };
+		EB76C08E120C87BF00951710 /* FastTableViewCells_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastTableViewCells_Prefix.pch; sourceTree = "<group>"; };
+		EB76C090120C87BF00951710 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EB76C092120C87BF00951710 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EB76C094120C87BF00951710 /* FastTableViewCellsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastTableViewCellsAppDelegate.h; sourceTree = "<group>"; };
+		EB76C095120C87BF00951710 /* FastTableViewCellsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FastTableViewCellsAppDelegate.m; sourceTree = "<group>"; };
+		EB76C098120C87BF00951710 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		EB76C09A120C87BF00951710 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		EB76C09B120C87BF00951710 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		EB76C09E120C87BF00951710 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		EB76C0E3120CAB4000951710 /* background_table-view-cell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_table-view-cell@2x.png"; sourceTree = "<group>"; };
+		EB76C0E5120CAB6100951710 /* background_table-view-cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_table-view-cell.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +112,8 @@
 				28C286E00D94DF7D0034E888 /* RootViewController.m */,
 				1D3623240D0F684500981E51 /* FastTableViewCellsAppDelegate.h */,
 				1D3623250D0F684500981E51 /* FastTableViewCellsAppDelegate.m */,
-				214632441198ED6000BD510D /* TableViewCell.h */,
-				214632451198ED6000BD510D /* TableViewCell.m */,
+				214632441198ED6000BD510D /* FastTableViewCell.h */,
+				214632451198ED6000BD510D /* FastTableViewCell.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -130,7 +161,7 @@
 		214632331198ECCD00BD510D /* NIBs */ = {
 			isa = PBXGroup;
 			children = (
-				214632411198ED4300BD510D /* TableViewCell.xib */,
+				214632411198ED4300BD510D /* FastTableViewCell.xib */,
 			);
 			path = NIBs;
 			sourceTree = "<group>";
@@ -138,9 +169,9 @@
 		214632D21198FD5200BD510D /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				21F43CD0119A0D5000B03342 /* lucas_sprite.png */,
-				21F43CD1119A0D5000B03342 /* ness_sprite.png */,
-				21F43CD2119A0D5000B03342 /* ninten_sprite.png */,
+				EB76C0E0120CAAAD00951710 /* High Resolution */,
+				EB76C0DF120CAA9E00951710 /* Standard Resolution */,
+				EB76C07C120C87BF00951710 /* FastTableViewCells */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -185,6 +216,85 @@
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB76C07C120C87BF00951710 /* FastTableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				EB76C07D120C87BF00951710 /* Classes */,
+				EB76C07E120C87BF00951710 /* Other Sources */,
+				EB76C07F120C87BF00951710 /* Resources */,
+				EB76C080120C87BF00951710 /* Frameworks */,
+			);
+			name = FastTableViewCells;
+			path = ../../../../FastTableViewCells;
+			sourceTree = "<group>";
+		};
+		EB76C07D120C87BF00951710 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EB76C094120C87BF00951710 /* FastTableViewCellsAppDelegate.h */,
+				EB76C095120C87BF00951710 /* FastTableViewCellsAppDelegate.m */,
+				EB76C09A120C87BF00951710 /* RootViewController.h */,
+				EB76C09B120C87BF00951710 /* RootViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EB76C07E120C87BF00951710 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EB76C08E120C87BF00951710 /* FastTableViewCells_Prefix.pch */,
+				EB76C092120C87BF00951710 /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		EB76C07F120C87BF00951710 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EB76C08D120C87BF00951710 /* FastTableViewCells-Info.plist */,
+				EB76C08F120C87BF00951710 /* InfoPlist.strings */,
+				EB76C097120C87BF00951710 /* MainWindow.xib */,
+				EB76C09D120C87BF00951710 /* RootViewController.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EB76C080120C87BF00951710 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB76C087120C87BF00951710 /* UIKit.framework */,
+				EB76C089120C87BF00951710 /* Foundation.framework */,
+				EB76C08B120C87BF00951710 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB76C0DF120CAA9E00951710 /* Standard Resolution */ = {
+			isa = PBXGroup;
+			children = (
+				EB76C0E5120CAB6100951710 /* background_table-view-cell.png */,
+				EB76C06E120C874800951710 /* Default.png */,
+				EB76C070120C874800951710 /* Icon.png */,
+				21F43CD0119A0D5000B03342 /* lucas_sprite.png */,
+				21F43CD1119A0D5000B03342 /* ness_sprite.png */,
+				21F43CD2119A0D5000B03342 /* ninten_sprite.png */,
+			);
+			name = "Standard Resolution";
+			sourceTree = "<group>";
+		};
+		EB76C0E0120CAAAD00951710 /* High Resolution */ = {
+			isa = PBXGroup;
+			children = (
+				EB76C0E3120CAB4000951710 /* background_table-view-cell@2x.png */,
+				EB76C06F120C874800951710 /* Default@2x.png */,
+				EB76C071120C874800951710 /* Icon@2x.png */,
+				EB76C072120C874800951710 /* lucas_sprite@2x.png */,
+				EB76C073120C874800951710 /* ness_sprite@2x.png */,
+				EB76C074120C874800951710 /* ninten_sprite@2x.png */,
+			);
+			name = "High Resolution";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,10 +368,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				214632421198ED4300BD510D /* TableViewCell.xib in Resources */,
+				214632421198ED4300BD510D /* FastTableViewCell.xib in Resources */,
 				21F43CD3119A0D5000B03342 /* lucas_sprite.png in Resources */,
 				21F43CD4119A0D5000B03342 /* ness_sprite.png in Resources */,
 				21F43CD5119A0D5000B03342 /* ninten_sprite.png in Resources */,
+				EB76C075120C874800951710 /* Default.png in Resources */,
+				EB76C076120C874800951710 /* Default@2x.png in Resources */,
+				EB76C077120C874800951710 /* Icon.png in Resources */,
+				EB76C078120C874800951710 /* Icon@2x.png in Resources */,
+				EB76C079120C874800951710 /* lucas_sprite@2x.png in Resources */,
+				EB76C07A120C874800951710 /* ness_sprite@2x.png in Resources */,
+				EB76C07B120C874800951710 /* ninten_sprite@2x.png in Resources */,
+				EB76C0E4120CAB4000951710 /* background_table-view-cell@2x.png in Resources */,
+				EB76C0E6120CAB6100951710 /* background_table-view-cell.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +394,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* FastTableViewCellsAppDelegate.m in Sources */,
 				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
-				214632461198ED6000BD510D /* TableViewCell.m in Sources */,
+				214632461198ED6000BD510D /* FastTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +407,33 @@
 			targetProxy = 214631E01198DCC400BD510D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EB76C08F120C87BF00951710 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB76C090120C87BF00951710 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EB76C097120C87BF00951710 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB76C098120C87BF00951710 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		EB76C09D120C87BF00951710 /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB76C09E120C87BF00951710 /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
@@ -324,7 +470,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = ../../;
+				HEADER_SEARCH_PATHS = "../../**";
 				INFOPLIST_FILE = "Resources/Other/FastTableViewCells-Info.plist";
 				OTHER_LDFLAGS = (
 					"-all_load",
@@ -344,7 +490,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = ../../;
+				HEADER_SEARCH_PATHS = "../../**";
 				INFOPLIST_FILE = "Resources/Other/FastTableViewCells-Info.plist";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (

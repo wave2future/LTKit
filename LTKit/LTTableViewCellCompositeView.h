@@ -60,7 +60,7 @@
 /// @see #initWithTableViewCell:
 ///
 
-+ (id)viewWithTableViewCell:(LTTableViewCell *)tableViewCell;
++ (id)compositeViewWithTableViewCell:(LTTableViewCell *)tableViewCell;
 
 ///
 /// Creates a <tt>UIView</tt> whose <tt>-drawRect:</tt> method draws viable subviews from the #tableViewCell property
