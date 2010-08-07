@@ -73,19 +73,6 @@
 		EB76C072120C874800951710 /* lucas_sprite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lucas_sprite@2x.png"; sourceTree = "<group>"; };
 		EB76C073120C874800951710 /* ness_sprite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ness_sprite@2x.png"; sourceTree = "<group>"; };
 		EB76C074120C874800951710 /* ninten_sprite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ninten_sprite@2x.png"; sourceTree = "<group>"; };
-		EB76C087120C87BF00951710 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		EB76C089120C87BF00951710 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		EB76C08B120C87BF00951710 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		EB76C08D120C87BF00951710 /* FastTableViewCells-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FastTableViewCells-Info.plist"; sourceTree = "<group>"; };
-		EB76C08E120C87BF00951710 /* FastTableViewCells_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastTableViewCells_Prefix.pch; sourceTree = "<group>"; };
-		EB76C090120C87BF00951710 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		EB76C092120C87BF00951710 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EB76C094120C87BF00951710 /* FastTableViewCellsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastTableViewCellsAppDelegate.h; sourceTree = "<group>"; };
-		EB76C095120C87BF00951710 /* FastTableViewCellsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FastTableViewCellsAppDelegate.m; sourceTree = "<group>"; };
-		EB76C098120C87BF00951710 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		EB76C09A120C87BF00951710 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		EB76C09B120C87BF00951710 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		EB76C09E120C87BF00951710 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
 		EB76C0E3120CAB4000951710 /* background_table-view-cell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_table-view-cell@2x.png"; sourceTree = "<group>"; };
 		EB76C0E5120CAB6100951710 /* background_table-view-cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_table-view-cell.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,7 +158,6 @@
 			children = (
 				EB76C0E0120CAAAD00951710 /* High Resolution */,
 				EB76C0DF120CAA9E00951710 /* Standard Resolution */,
-				EB76C07C120C87BF00951710 /* FastTableViewCells */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -214,59 +200,6 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EB76C07C120C87BF00951710 /* FastTableViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				EB76C07D120C87BF00951710 /* Classes */,
-				EB76C07E120C87BF00951710 /* Other Sources */,
-				EB76C07F120C87BF00951710 /* Resources */,
-				EB76C080120C87BF00951710 /* Frameworks */,
-			);
-			name = FastTableViewCells;
-			path = ../../../../FastTableViewCells;
-			sourceTree = "<group>";
-		};
-		EB76C07D120C87BF00951710 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				EB76C094120C87BF00951710 /* FastTableViewCellsAppDelegate.h */,
-				EB76C095120C87BF00951710 /* FastTableViewCellsAppDelegate.m */,
-				EB76C09A120C87BF00951710 /* RootViewController.h */,
-				EB76C09B120C87BF00951710 /* RootViewController.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		EB76C07E120C87BF00951710 /* Other Sources */ = {
-			isa = PBXGroup;
-			children = (
-				EB76C08E120C87BF00951710 /* FastTableViewCells_Prefix.pch */,
-				EB76C092120C87BF00951710 /* main.m */,
-			);
-			name = "Other Sources";
-			sourceTree = "<group>";
-		};
-		EB76C07F120C87BF00951710 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				EB76C08D120C87BF00951710 /* FastTableViewCells-Info.plist */,
-				EB76C08F120C87BF00951710 /* InfoPlist.strings */,
-				EB76C097120C87BF00951710 /* MainWindow.xib */,
-				EB76C09D120C87BF00951710 /* RootViewController.xib */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		EB76C080120C87BF00951710 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EB76C087120C87BF00951710 /* UIKit.framework */,
-				EB76C089120C87BF00951710 /* Foundation.framework */,
-				EB76C08B120C87BF00951710 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -407,33 +340,6 @@
 			targetProxy = 214631E01198DCC400BD510D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		EB76C08F120C87BF00951710 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EB76C090120C87BF00951710 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		EB76C097120C87BF00951710 /* MainWindow.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EB76C098120C87BF00951710 /* en */,
-			);
-			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
-		EB76C09D120C87BF00951710 /* RootViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EB76C09E120C87BF00951710 /* en */,
-			);
-			name = RootViewController.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {

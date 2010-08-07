@@ -20,11 +20,26 @@
 
 #import <UIKit/UIKit.h>
 
+@class LTTableViewCellCompositeView;
+
 ///
 /// A subclass of <tt>UITableViewCell</tt> that supports fast drawing via view compositing.
 ///
 
 @interface LTTableViewCell : UITableViewCell
+{
+    @private
+    
+    LTTableViewCellCompositeView * compositeView_;
+}
+
+///
+/// The view that will be drawn on based on the subviews of this class's <tt>contentView</tt> property
+///
+/// <em>(This property is backed by the private instance variable <tt>compositeView_</tt></em>)
+///
+
+@property (nonatomic, retain) LTTableViewCellCompositeView * compositeView;
 
 ///
 /// Draws a view composited from the view hierarchy defined by <tt>self</tt>.

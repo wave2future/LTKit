@@ -31,12 +31,12 @@
 ///
 /// At the moment, this class detects and draws the following <tt>UIView</tt> subclasses:
 ///    - <tt>UILabel</tt>, via <tt>NSString</tt>'s <tt>-drawInRect:withFont:lineBreakMode:alignment:</tt> method
-///    - <tt>UIImageView</tt>, via <tt>UIImage</tt>'s <tt>-drawInRect:</tt> method
+///    - <tt>UIImageView</tt>, via <tt>UIImage</tt>'s <tt>-drawInRect:blendMode:alpha:</tt> method
 ///
 /// Importantly, the properties of the subviews of #tableViewCell should be set to allow for the drawing methods to function properly.
 /// Specifically, the frame of the subview should be valid at the very least. In addition to this, for <tt>UILabel</tt>s, specifying the
-/// font, line break mode, and alignment will allow the rendered string to be properly formatted. Making use of Interface Builder is
-/// recommended as these properties can quickly be configured visually.
+/// font, line break mode, alignment, shadow offset, and shadow color will allow the rendered string to be properly formatted. Making use
+/// of Interface Builder is recommended as these properties can quickly be configured visually.
 ///
 
 @interface LTTableViewCellCompositeView : UIView
@@ -52,7 +52,7 @@
 /// <em>(This property is backed by the private instance variable <tt>tableViewCell_</tt></em>)
 ///
 
-@property (nonatomic, retain) LTTableViewCell * tableViewCell;
+@property (nonatomic, assign) LTTableViewCell * tableViewCell;
 
 ///
 /// Autoreleases the return result of #initWithTableViewCell:

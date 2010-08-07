@@ -23,28 +23,85 @@
 
 @implementation LTTableViewCell
 
+@synthesize compositeView = compositeView_;
+
 #pragma mark -
 #pragma mark LTTableViewCell Methods
 
 - (void)drawCompositeView
 {
-	LTTableViewCellCompositeView * compositeView = [LTTableViewCellCompositeView compositeViewWithTableViewCell:self];
-	compositeView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-	compositeView.contentMode = UIViewContentModeRedraw;
+	if (self.compositeView == nil)
+    {
+        self.compositeView = [LTTableViewCellCompositeView compositeViewWithTableViewCell:self];
+        self.compositeView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        self.compositeView.contentMode = UIViewContentModeRedraw;
+        
+        for (UIView * subview in self.contentView.subviews)
+        {
+            subview.hidden = YES;
+        }
+        
+        [self.contentView addSubview:self.compositeView];
+    }
+    
+    [self setNeedsDisplay];
+}
 
-	for (UIView * subview in self.contentView.subviews)
-	{
-		if ([subview isKindOfClass:[LTTableViewCellCompositeView class]])
-		{
-			[subview removeFromSuperview];
-		}
-		else
-		{
-			subview.hidden = YES;
-		}
-	}
+#pragma mark -
+#pragma mark UITableViewCell Methods
 
-	[self.contentView addSubview:compositeView];
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    
+    if (self != nil)
+    {
+        self.compositeView = nil;
+    }
+    
+    return self;
+}
+
+#pragma mark -
+#pragma mark UIView Methods
+
+- (id)initWithFrame:(CGRect)frame
+{
+    return [self initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+}
+
+- (void)setNeedsDisplay
+{
+    [super setNeedsDisplay];
+    
+    [self.compositeView setNeedsDisplay];
+}
+
+#pragma mark -
+#pragma mark NSObject Methods
+
+- (id)init
+{
+    return [self initWithFrame:CGRectZero];
+}
+
+- (void)dealloc
+{
+    [compositeView_ release];
+    
+    compositeView_ = nil;
+    
+    [super dealloc];
+}
+
+#pragma mark -
+#pragma mark NSObject (UIKit Additions) Methods
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    self.compositeView = nil;
 }
 
 @end

@@ -51,14 +51,11 @@
 {
 	if (tableViewCell != self.tableViewCell)
 	{
-		[tableViewCell retain];
-		[tableViewCell_ release];
 		tableViewCell_ = tableViewCell;
 
 		if (self.tableViewCell != nil)
 		{
 			self.frame = self.tableViewCell.contentView.bounds;
-			self.backgroundColor = self.tableViewCell.backgroundColor;
 		}
 	}
 }
@@ -123,8 +120,6 @@
 
 - (void)dealloc
 {
-	[tableViewCell_ release];
-
 	tableViewCell_ = nil;
 
 	[super dealloc];
