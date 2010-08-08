@@ -64,7 +64,7 @@
 								</object>
 								<object class="NSColor" key="IBUIShadowColor">
 									<int key="NSColorSpace">1</int>
-									<bytes key="NSRGB">MC42NjMwNDM0NzgzIDAuNjYzMDQzNDc4MyAwLjY2MzA0MzQ3ODMAA</bytes>
+									<bytes key="NSRGB">MC44MjYwODY5NTY1IDAuODI2MDg2OTU2NSAwLjgyNjA4Njk1NjUAA</bytes>
 								</object>
 								<string key="IBUIShadowOffset">{1, 1}</string>
 								<int key="IBUIBaselineAdjustment">1</int>
@@ -124,7 +124,7 @@
 									<bytes key="NSRGB">MC40NzgyNjA4Njk2IDAuNDc4MjYwODY5NiAwLjQ3ODI2MDg2OTYAA</bytes>
 								</object>
 								<reference key="IBUIHighlightedColor" ref="1069076359"/>
-								<object class="NSColor" key="IBUIShadowColor">
+								<object class="NSColor" key="IBUIShadowColor" id="82448548">
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MCAwAA</bytes>
 								</object>
@@ -136,11 +136,8 @@
 						<string key="NSFrameSize">{300, 61}</string>
 						<reference key="NSSuperview" ref="627895314"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="541116910"/>
-						<object class="NSColor" key="IBUIBackgroundColor">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MCAwAA</bytes>
-						</object>
+						<reference key="NSNextKeyView" ref="255424532"/>
+						<reference key="IBUIBackgroundColor" ref="82448548"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">4</int>
@@ -163,12 +160,9 @@
 				<string key="IBUIReuseIdentifier">FastTableViewCell</string>
 			</object>
 			<object class="IBUIImageView" id="541116910">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<string key="NSFrameSize">{320, 61}</string>
-				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="255424532"/>
 				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<object class="NSCustomResource" key="IBUIImage">
