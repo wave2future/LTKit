@@ -2,9 +2,15 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1024</int>
-		<string key="IBDocument.SystemVersion">10F569</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1179</string>
-		<string key="IBDocument.AppKitVersion">1038.29</string>
+		<string key="IBDocument.SystemVersion">10H574</string>
+		<string key="IBDocument.InterfaceBuilderVersion">1222</string>
+		<string key="IBDocument.AppKitVersion">1038.35</string>
+		<array key="IBDocument.IntegratedClassDependencies">
+			<string>IBUITableViewCell</string>
+			<string>IBUIImageView</string>
+			<string>IBUILabel</string>
+			<string>IBProxyObject</string>
+		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 		</array>
@@ -31,7 +37,6 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{6, 6}, {50, 50}}</string>
 								<reference key="NSSuperview" ref="485274538"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="191333460"/>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -41,7 +46,6 @@
 								<int key="NSvFlags">290</int>
 								<string key="NSFrame">{{65, 6}, {227, 19}}</string>
 								<reference key="NSSuperview" ref="485274538"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="525055197"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -75,7 +79,6 @@
 								<int key="NSvFlags">290</int>
 								<string key="NSFrame">{{65, 25}, {227, 16}}</string>
 								<reference key="NSSuperview" ref="485274538"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="689392736"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -106,7 +109,6 @@
 								<int key="NSvFlags">266</int>
 								<string key="NSFrame">{{65, 41}, {227, 15}}</string>
 								<reference key="NSSuperview" ref="485274538"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -135,7 +137,6 @@
 						</array>
 						<string key="NSFrameSize">{300, 61}</string>
 						<reference key="NSSuperview" ref="627895314"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="255424532"/>
 						<reference key="IBUIBackgroundColor" ref="82448548"/>
 						<bool key="IBUIOpaque">NO</bool>
@@ -147,7 +148,6 @@
 				</array>
 				<string key="NSFrameSize">{320, 61}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="485274538"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
@@ -160,9 +160,10 @@
 				<string key="IBUIReuseIdentifier">FastTableViewCell</string>
 			</object>
 			<object class="IBUIImageView" id="541116910">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<string key="NSFrameSize">{320, 61}</string>
+				<reference key="NSSuperview"/>
 				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<object class="NSCustomResource" key="IBUIImage">
@@ -287,30 +288,9 @@
 			<nil key="sourceID"/>
 			<int key="maxID">51</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<object class="IBPartialClassDescription">
-					<string key="className">FastTableViewCell</string>
-					<string key="superclassName">UITableViewCell</string>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="firstLabel">UILabel</string>
-						<string key="imageView">UIImageView</string>
-						<string key="secondLabel">UILabel</string>
-						<string key="thirdLabel">UILabel</string>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./classes-xjh84/FastTableViewCell.h</string>
-					</object>
-				</object>
-			</array>
-		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
-		<object class="NSDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
-			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.iPhoneOS</string>
-			<integer value="1024" key="NS.object.0"/>
-		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<string key="IBDocument.LastKnownRelativeProjectPath">../../FastTableViewCells.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>

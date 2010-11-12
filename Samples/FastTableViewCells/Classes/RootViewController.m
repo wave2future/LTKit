@@ -78,7 +78,7 @@
 		cell.thirdLabel.text = @"Hometown: Tazmily Village";
 	}
 
-	//[cell drawCompositeView];
+	[cell drawCompositeView];
 
     return cell;
 }
