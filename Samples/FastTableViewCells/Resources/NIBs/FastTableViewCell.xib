@@ -176,14 +176,6 @@
 			<array key="connectionRecords">
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">backgroundView</string>
-						<reference key="source" ref="627895314"/>
-						<reference key="destination" ref="541116910"/>
-					</object>
-					<int key="connectionID">47</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">firstLabel</string>
 						<reference key="source" ref="627895314"/>
 						<reference key="destination" ref="191333460"/>

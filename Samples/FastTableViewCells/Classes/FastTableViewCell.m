@@ -28,6 +28,17 @@
 @synthesize thirdLabel = thirdLabel_;
 
 #pragma mark -
+#pragma mark UIView Methods
+
+- (void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+
+    CGSize size = self.bounds.size;
+    self.contentStretch = CGRectMake((275.0 / size.width), 0.0, ((size.width - 276.0) / size.width), 1.0);
+}
+
+#pragma mark -
 #pragma mark NSObject Methods
 
 - (id)init

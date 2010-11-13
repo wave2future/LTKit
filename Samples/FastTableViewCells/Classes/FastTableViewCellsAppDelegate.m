@@ -33,7 +33,7 @@
 {
 	self.window = [[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds] autorelease];
 	self.navigationController = [[[UINavigationController alloc] initWithRootViewController:[[[RootViewController alloc]
-        initWithStyle:UITableViewStylePlain] autorelease]] autorelease];
+        initWithStyle:UITableViewStyleGrouped] autorelease]] autorelease];
     [self.window addSubview:self.navigationController.view];
     [self.window makeKeyAndVisible];
 
