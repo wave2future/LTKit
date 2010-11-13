@@ -60,10 +60,10 @@
 /// @see #initWithTableViewCell:
 ///
 
-+ (id)compositeViewWithTableViewCell:(LTTableViewCell *)tableViewCell;
++ (id)compositeViewFromTableViewCell:(LTTableViewCell *)tableViewCell;
 
 ///
-/// Creates a <tt>UIView</tt> whose <tt>-drawRect:</tt> method draws viable subviews from the #tableViewCell property
+/// Creates a <tt>UIView</tt> whose <tt>-drawRect:</tt> method draws viable subviews of the #tableViewCell property
 ///
 /// This initializer sets the value of the #tableViewCell property. When <tt>-drawRect:</tt> is called on this view, it uses #tableViewCell
 /// to determine what <tt>UIView</tt> subviews can be composited.

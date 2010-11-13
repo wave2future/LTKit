@@ -25,6 +25,8 @@
 
 @synthesize compositeView = compositeView_;
 
+static const NSArray * kCompositedClassTypes = nil;
+
 #pragma mark -
 #pragma mark LTTableViewCell Methods
 
@@ -32,16 +34,19 @@
 {
 	if (self.compositeView == nil)
     {
-        self.compositeView = [LTTableViewCellCompositeView compositeViewWithTableViewCell:self];
+        self.compositeView = [LTTableViewCellCompositeView compositeViewFromTableViewCell:self];
         self.compositeView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         self.compositeView.contentMode = UIViewContentModeRedraw;
         
         for (UIView * subview in self.contentView.subviews)
         {
-            subview.hidden = YES;
+            if ([kCompositedClassTypes containsObject:[subview class]])
+            {
+                [subview removeFromSuperview];
+            }
         }
         
-        [self.contentView addSubview:self.compositeView];
+        [self.contentView insertSubview:self.compositeView atIndex:0];
     }
     
     [self setNeedsDisplay];
@@ -70,15 +75,27 @@
     return [self initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
 }
 
-- (void)setNeedsDisplay
+- (void)setFrame:(CGRect)frame
 {
-    [super setNeedsDisplay];
+    [super setFrame:frame];
     
-    [self.compositeView setNeedsDisplay];
+    [UIView setAnimationsEnabled:NO];
+    
+    self.compositeView.contentStretch = self.contentStretch;
+	
+    [UIView setAnimationsEnabled:YES];
 }
 
 #pragma mark -
 #pragma mark NSObject Methods
+
++ (void)initialize
+{
+    if (self == [LTTableViewCell class])
+    {
+        kCompositedClassTypes = [[NSArray alloc] initWithObjects:[UILabel class], [UIImageView class], nil];
+    }
+}
 
 - (id)init
 {

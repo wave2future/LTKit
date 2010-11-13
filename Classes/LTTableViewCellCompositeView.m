@@ -29,7 +29,7 @@
 #pragma mark -
 #pragma mark LTTableViewCellContentView Methods
 
-+ (id)compositeViewWithTableViewCell:(LTTableViewCell *)tableViewCell
++ (id)compositeViewFromTableViewCell:(LTTableViewCell *)tableViewCell
 {
 	return [[[self alloc] initWithTableViewCell:tableViewCell] autorelease];
 }
@@ -41,7 +41,8 @@
 	if (self != nil)
 	{
 		self.tableViewCell = tableViewCell;
-		self.opaque = YES;
+        self.backgroundColor = [UIColor clearColor];
+		self.opaque = NO;
 	}
 
 	return self;
@@ -65,9 +66,9 @@
 
 - (void)drawRect:(CGRect)rect
 {
-    if (!self.tableViewCell.selected && !self.tableViewCell.highlighted)
+    if ((! self.tableViewCell.selected) && (! self.tableViewCell.highlighted))
     {
-        if (self.tableViewCell.backgroundView != nil && [self.tableViewCell.backgroundView isKindOfClass:[UIImageView class]])
+        if ((self.tableViewCell.backgroundView != nil) && [self.tableViewCell.backgroundView isKindOfClass:[UIImageView class]])
         {
             UIImageView * imageView = (UIImageView *)self.tableViewCell.backgroundView;
             [imageView.image drawInRect:imageView.frame blendMode:kCGBlendModeNormal alpha:imageView.alpha];
