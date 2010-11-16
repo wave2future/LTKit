@@ -27,9 +27,12 @@
 @interface NSObject (LTAdditions)
 
 ///
-/// Determines the receiver's property names.
+/// Returns an array containing the receiver's property names.
+///
 /// This method uses the Objective-C Runtime API to determine the name of each property, defined by the <tt>\@property</tt> keyword, of the
-/// receiver. @returns an array of <tt>NSString</tt>s representing the receiver's property names
+/// receiver and returns the names of each property in an array.
+///
+/// @returns an array of <tt>NSString</tt>s representing the receiver's property names
 ///
 
 + (NSArray *)propertyNames;

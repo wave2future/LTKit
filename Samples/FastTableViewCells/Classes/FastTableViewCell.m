@@ -18,6 +18,7 @@
 //  limitations under the License.
 //
 
+#import "LTKit/LTKit.h"
 #import "FastTableViewCell.h"
 
 @implementation FastTableViewCell
@@ -33,9 +34,33 @@
 - (void)setFrame:(CGRect)frame
 {
     [super setFrame:frame];
-
-    CGSize size = self.bounds.size;
-    self.contentStretch = CGRectMake((275.0 / size.width), 0.0, ((size.width - 276.0) / size.width), 1.0);
+    
+    // In this particular subclass of LTTableViewCell, the right sides of the frames of the three labels represent the beginning of the
+    // portion of the view to be stretched during resizing.
+    
+    UIView * rightmostSubview = [self.contentView rightmostSubviewExcludingCompositeViews];
+    
+    if (rightmostSubview != nil)
+    {
+    	CGSize contentSize = self.bounds.size;
+        CGFloat rightmostXCoordinate = CGRectGetMaxX(rightmostSubview.frame);
+        
+        //[UIView setAnimationsEnabled:NO];
+        self.compositeView.contentStretch = CGRectMake((rightmostXCoordinate - 1.0) / contentSize.width, 0, 1.0 / contentSize.width ,1.0);
+        //self.compositeView.contentStretch = CGRectMake((rightmostXCoordinate / contentSize.width), 0.0, ((contentSize.width - rightmostXCoordinate) /
+        //	contentSize.width), 1.0);
+        //[UIView setAnimationsEnabled:YES];
+        
+        NSLog(@"self.firstLabel.text: %@", self.firstLabel.text);
+        NSLog(@"self.secondLabel.text: %@", self.secondLabel.text);
+        NSLog(@"self.thirdLabel.text: %@", self.thirdLabel.text);
+        
+        NSLog(@"contentSize: %@", NSStringFromCGSize(contentSize));
+        NSLog(@"rightmostXCoordinate: %f", rightmostXCoordinate);
+        NSLog(@"self.contentStretch: %@", NSStringFromCGRect(self.contentStretch));
+        NSLog(@"self.contentView.contentStretch: %@", NSStringFromCGRect(self.contentView.contentStretch));
+        NSLog(@"self.compositeView.contentStretch: %@\n\n", NSStringFromCGRect(self.compositeView.contentStretch));
+    }
 }
 
 #pragma mark -

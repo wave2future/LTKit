@@ -18,18 +18,7 @@
 //  limitations under the License.
 //
 
-// Categories
-
-#import "LTKit/LTCategories.h"
-
-// The following categories are included in LTCategories.h:
-
-// NSObject+LTAdditions.h
-// UIBarButtonItem+LTAdditions.h
-// UIColor+LTAdditions.h
-// UIView+LTAdditions.h
-
-// Classes
-
-#import "LTKit/LTTableViewCell.h"
-#import "LTKit/LTTableViewCellCompositeView.h"
+#import "LTKit/NSObject+LTAdditions.h"
+#import "LTKit/UIBarButtonItem+LTAdditions.h"
+#import "LTKit/UIColor+LTAdditions.h"
+#import "LTKit/UIView+LTAdditions.h"

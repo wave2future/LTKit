@@ -18,6 +18,7 @@
 //  limitations under the License.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "LTKit/LTTableViewCellCompositeView.h"
 #import "LTKit/LTTableViewCell.h"
 #import "LTKit/NSObject+LTAdditions.h"
@@ -85,11 +86,14 @@
 		{
 			UILabel * label = (UILabel *)property;
             
-            if (label.shadowColor != nil)
+            if ((label.shadowColor != nil) && (! CGSizeEqualToSize(label.shadowOffset, CGSizeZero)))
             {
+                CGPoint shadowPoint = CGPointMake((label.frame.origin.x + label.shadowOffset.width), (label.frame.origin.y +
+                	label.shadowOffset.height));
+
                 [label.shadowColor set];
-                [label.text drawInRect:CGRectOffset(label.frame, label.shadowOffset.width, label.shadowOffset.height) withFont:label.font
-                	lineBreakMode:label.lineBreakMode alignment:label.textAlignment];
+                [label.text drawAtPoint:shadowPoint forWidth:label.frame.size.width withFont:label.font minFontSize:label.minimumFontSize
+                	actualFontSize:NULL lineBreakMode:label.lineBreakMode baselineAdjustment:label.baselineAdjustment];
             }
             
             if (self.tableViewCell.selected || self.tableViewCell.highlighted)
@@ -100,8 +104,10 @@
             {
                 [label.textColor set];
             }
-
-			[label.text drawInRect:label.frame withFont:label.font lineBreakMode:label.lineBreakMode alignment:label.textAlignment];
+            
+            [label.text drawAtPoint:label.frame.origin forWidth:label.frame.size.width withFont:label.font
+            	minFontSize:label.minimumFontSize actualFontSize:NULL lineBreakMode:label.lineBreakMode
+                baselineAdjustment:label.baselineAdjustment];
 		}
 		else if ([property isKindOfClass:[UIImageView class]])
 		{
@@ -109,6 +115,20 @@
 			[imageView.image drawInRect:imageView.frame blendMode:kCGBlendModeNormal alpha:imageView.alpha];
 		}
 	}
+    
+    //Get the CGContext from this view
+	CGContextRef context = UIGraphicsGetCurrentContext();
+	//Set the stroke (pen) color
+	CGContextSetStrokeColorWithColor(context, [UIColor blueColor].CGColor);
+	//Set the width of the pen mark
+	CGContextSetLineWidth(context, 1.0);
+
+	//Define a rectangle
+	CGContextAddRect(context, CGRectMake(self.contentStretch.origin.x * self.bounds.size.width, self.contentStretch.origin.y *
+    	self.bounds.size.height, self.contentStretch.size.width * self.bounds.size.width, self.contentStretch.size.height *
+        self.bounds.size.height));
+	//Draw it
+	CGContextStrokePath(context);
 }
 
 #pragma mark -

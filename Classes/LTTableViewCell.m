@@ -42,7 +42,8 @@ static const NSArray * kCompositedClassTypes = nil;
         {
             if ([kCompositedClassTypes containsObject:[subview class]])
             {
-                [subview removeFromSuperview];
+                //[subview removeFromSuperview];
+                subview.hidden = YES;
             }
         }
         
@@ -75,16 +76,16 @@ static const NSArray * kCompositedClassTypes = nil;
     return [self initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
 }
 
-- (void)setFrame:(CGRect)frame
-{
-    [super setFrame:frame];
-    
-    [UIView setAnimationsEnabled:NO];
-    
-    self.compositeView.contentStretch = self.contentStretch;
-	
-    [UIView setAnimationsEnabled:YES];
-}
+//- (void)setFrame:(CGRect)frame
+//{
+//    [super setFrame:frame];
+//    
+//    [UIView setAnimationsEnabled:NO];
+//    
+//    self.compositeView.contentStretch = self.contentStretch;
+//	
+//    [UIView setAnimationsEnabled:YES];
+//}
 
 #pragma mark -
 #pragma mark NSObject Methods

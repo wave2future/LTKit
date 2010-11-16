@@ -19,6 +19,9 @@
 		21F43CE3119A0F4400B03342 /* UIColor+LTAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 21F43CE1119A0F4400B03342 /* UIColor+LTAdditions.h */; };
 		21F43CE4119A0F4400B03342 /* UIColor+LTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F43CE2119A0F4400B03342 /* UIColor+LTAdditions.m */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		EB669070128EC09F007A5AF2 /* LTCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = EB66906E128EC09F007A5AF2 /* LTCategories.h */; };
+		EB72D5B5128EAB68008B1498 /* UIView+LTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EB72D5B3128EAB68008B1498 /* UIView+LTAdditions.m */; };
+		EB72D5B7128EABA4008B1498 /* UIView+LTAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = EB72D5B6128EABA4008B1498 /* UIView+LTAdditions.h */; };
 		EB76C102120CB1F000951710 /* UIBarButtonItem+LTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EB76C100120CB1F000951710 /* UIBarButtonItem+LTAdditions.m */; };
 		EB76C104120CB24600951710 /* UIBarButtonItem+LTAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = EB76C103120CB24600951710 /* UIBarButtonItem+LTAdditions.h */; };
 /* End PBXBuildFile section */
@@ -37,6 +40,9 @@
 		21F43CE2119A0F4400B03342 /* UIColor+LTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LTAdditions.m"; sourceTree = "<group>"; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libLTKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLTKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB66906E128EC09F007A5AF2 /* LTCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTCategories.h; path = LTKit/LTCategories.h; sourceTree = SOURCE_ROOT; };
+		EB72D5B3128EAB68008B1498 /* UIView+LTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LTAdditions.m"; sourceTree = "<group>"; };
+		EB72D5B6128EABA4008B1498 /* UIView+LTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+LTAdditions.h"; path = "LTKit/UIView+LTAdditions.h"; sourceTree = SOURCE_ROOT; };
 		EB76C100120CB1F000951710 /* UIBarButtonItem+LTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+LTAdditions.m"; sourceTree = "<group>"; };
 		EB76C103120CB24600951710 /* UIBarButtonItem+LTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+LTAdditions.h"; path = "LTKit/UIBarButtonItem+LTAdditions.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -87,6 +93,7 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EB66906E128EC09F007A5AF2 /* LTCategories.h */,
 				214632391198ECF800BD510D /* LTKit.h */,
 				214631901198CE9400BD510D /* LTTableViewCell.h */,
 				214631911198CE9400BD510D /* LTTableViewCell.m */,
@@ -105,6 +112,8 @@
 				EB76C100120CB1F000951710 /* UIBarButtonItem+LTAdditions.m */,
 				21F43CE1119A0F4400B03342 /* UIColor+LTAdditions.h */,
 				21F43CE2119A0F4400B03342 /* UIColor+LTAdditions.m */,
+				EB72D5B6128EABA4008B1498 /* UIView+LTAdditions.h */,
+				EB72D5B3128EAB68008B1498 /* UIView+LTAdditions.m */,
 			);
 			name = Categories;
 			path = Classes;
@@ -123,6 +132,8 @@
 				213C693311990E6600BB9405 /* NSObject+LTAdditions.h in Headers */,
 				21F43CE3119A0F4400B03342 /* UIColor+LTAdditions.h in Headers */,
 				EB76C104120CB24600951710 /* UIBarButtonItem+LTAdditions.h in Headers */,
+				EB72D5B7128EABA4008B1498 /* UIView+LTAdditions.h in Headers */,
+				EB669070128EC09F007A5AF2 /* LTCategories.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +196,7 @@
 				213C693211990E6600BB9405 /* NSObject+LTAdditions.m in Sources */,
 				21F43CE4119A0F4400B03342 /* UIColor+LTAdditions.m in Sources */,
 				EB76C102120CB1F000951710 /* UIBarButtonItem+LTAdditions.m in Sources */,
+				EB72D5B5128EAB68008B1498 /* UIView+LTAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

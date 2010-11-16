@@ -59,24 +59,28 @@
 	if ((indexPath.row % 3) == 0)
 	{
 		cell.imageView.image = [UIImage imageNamed:@"ninten_sprite"];
-		cell.firstLabel.text = @"Ninten (MOTHER 1)";
-		cell.secondLabel.text = @"Unique PSI: 4th-D Slip";
-		cell.thirdLabel.text = @"Hometown: Mother's Day";
+		cell.firstLabel.text = @"ニンテン (Ninten) - MOTHER 1 xsdfl sdflk assd";
+		cell.secondLabel.text = @"Hometown: Mother's Day";
+		cell.thirdLabel.text = @"Unique PSI: 4th-D Slip";
 	}
 	else if ((indexPath.row % 3) == 1)
 	{
 		cell.imageView.image = [UIImage imageNamed:@"ness_sprite"];
-		cell.firstLabel.text = @"Ness (MOTHER 2)";
-		cell.secondLabel.text = @"Unique PSI: PK Rockin'";
-		cell.thirdLabel.text = @"Hometown: Onett";
+		cell.firstLabel.text = @"ネス (Ness) - MOTHER 2";
+		cell.secondLabel.text = @"Hometown: Onett";
+		cell.thirdLabel.text = @"Unique PSI: PK Rockin'";
 	}
 	else
 	{
 		cell.imageView.image = [UIImage imageNamed:@"lucas_sprite"];
-		cell.firstLabel.text = @"Lucas (MOTHER 3)";
-		cell.secondLabel.text = @"Unique PSI: PK Love";
-		cell.thirdLabel.text = @"Hometown: Tazmily Village";
+		cell.firstLabel.text = @"リュカ (Lucas) - MOTHER 3";
+		cell.secondLabel.text = @"Hometown: Tazmily Village";
+		cell.thirdLabel.text = @"Unique PSI: PK Love";
 	}
+    
+    //[cell.firstLabel sizeToFit];
+    //[cell.secondLabel sizeToFit];
+    //[cell.thirdLabel sizeToFit];
 
 	[cell drawCompositeView];
 

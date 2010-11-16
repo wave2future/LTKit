@@ -27,16 +27,16 @@
 ///
 /// This class requires a fully initialized table view cell (most easily configured in Interface Builder and saved as a nib) that contains
 /// drawable subviews. The properties of these subviews serve as a reference so that this view can replicate their appearance using more
-/// efficient drawing methods rather than relying on the iPhone SDK to manage and draw multiple <tt>UIView</tt>s.
+/// efficient drawing methods rather than relying on the iOS SDK to manage and draw multiple <tt>UIView</tt>s.
 ///
-/// At the moment, this class detects and draws the following <tt>UIView</tt> subclasses:
-///    - <tt>UILabel</tt>, via <tt>NSString</tt>'s <tt>-drawInRect:withFont:lineBreakMode:alignment:</tt> method
-///    - <tt>UIImageView</tt>, via <tt>UIImage</tt>'s <tt>-drawInRect:blendMode:alpha:</tt> method
+/// Currently, this class detects and draws the following <tt>UIView</tt> subclasses:
+///    - <tt>UILabel</tt>
+///    - <tt>UIImageView</tt>
 ///
 /// Importantly, the properties of the subviews of #tableViewCell should be set to allow for the drawing methods to function properly.
 /// Specifically, the frame of the subview should be valid at the very least. In addition to this, for <tt>UILabel</tt>s, specifying the
-/// font, line break mode, alignment, shadow offset, and shadow color will allow the rendered string to be properly formatted. Making use
-/// of Interface Builder is recommended as these properties can quickly be configured visually.
+/// font, minimum font size, line break mode, baseline adjustment, alignment, shadow offset, and shadow color will allow the rendered string
+/// to be properly formatted. Making use of Interface Builder is recommended as these properties can quickly be configured visually.
 ///
 
 @interface LTTableViewCellCompositeView : UIView
@@ -70,7 +70,7 @@
 ///
 /// @param tableViewCell	the reference table view cell used to inform this view what to composite
 ///
-/// @returns a <tt>UIView</tt> optimized for fast drawing in table view cells
+/// @returns a composited <tt>UIView</tt> optimized for fast drawing in table view cells
 ///
 
 - (id)initWithTableViewCell:(LTTableViewCell *)tableViewCell;
