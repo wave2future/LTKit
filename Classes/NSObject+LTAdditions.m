@@ -1,5 +1,5 @@
 //
-//  Copyright 2010 Michael Shannon Potter
+//  Copyright 2010-2011 Michael Shannon Potter
 //
 //  LucasTizma
 //  www.lucastizma.com
@@ -33,13 +33,13 @@
 
 	NSMutableArray * propertyNames = [NSMutableArray arrayWithCapacity:numberOfProperties];
 
-	for (int i = 0; i < numberOfProperties; i++)
+	for (NSUInteger index = 0; index < numberOfProperties; index++)
 	{
-		objc_property_t property = properties[i];
+		objc_property_t property = properties[index];
 		[propertyNames addObject:[NSString stringWithCString:property_getName(property)	encoding:NSUTF8StringEncoding]];
 	}
 
-	return (NSArray *)propertyNames;
+	return propertyNames;
 }
 
 @end

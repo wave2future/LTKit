@@ -1,5 +1,5 @@
 //
-//  Copyright 2010 Michael Shannon Potter
+//  Copyright 2010-2011 Michael Shannon Potter
 //
 //  LucasTizma
 //  www.lucastizma.com
@@ -27,9 +27,3 @@
 // NSObject+LTAdditions.h
 // UIBarButtonItem+LTAdditions.h
 // UIColor+LTAdditions.h
-// UIView+LTAdditions.h
-
-// Classes
-
-#import "LTKit/LTTableViewCell.h"
-#import "LTKit/LTTableViewCellCompositeView.h"

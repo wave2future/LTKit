@@ -1,5 +1,5 @@
 //
-//  Copyright 2010 Michael Shannon Potter
+//  Copyright 2010-2011 Michael Shannon Potter
 //
 //  LucasTizma
 //  www.lucastizma.com
@@ -21,4 +21,3 @@
 #import "LTKit/NSObject+LTAdditions.h"
 #import "LTKit/UIBarButtonItem+LTAdditions.h"
 #import "LTKit/UIColor+LTAdditions.h"
-#import "LTKit/UIView+LTAdditions.h"

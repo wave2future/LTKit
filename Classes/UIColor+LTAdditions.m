@@ -1,5 +1,5 @@
 //
-//  Copyright 2010 Michael Shannon Potter
+//  Copyright 2010-2011 Michael Shannon Potter
 //
 //  LucasTizma
 //  www.lucastizma.com
